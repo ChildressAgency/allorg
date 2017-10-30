@@ -1,0 +1,63 @@
+/*
+  Theme Name: All.org
+  Theme Author: The Childress Agency
+  Theme Author URI: https://childressagency.com
+  Version: 1.0
+*/
+
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=b5ac126c-ad65-4596-b427-4e1072f5dfb5");
+    @font-face{
+        font-family:"FF Kievit W03_n3";
+        src:url("Fonts/fda84739-8b9e-4985-9983-e8a08d4d5990.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Kievit";
+        src:url("Fonts/fda84739-8b9e-4985-9983-e8a08d4d5990.eot?#iefix");
+        src:url("Fonts/fda84739-8b9e-4985-9983-e8a08d4d5990.eot?#iefix") format("eot"),url("Fonts/30d75d23-3127-4476-9cfa-4cd72858edcb.woff2") format("woff2"),url("Fonts/3426018b-f607-4ab0-a6af-b07fe84c5afb.woff") format("woff"),url("Fonts/b4632d7c-302d-41f7-b2db-c7082c6443af.ttf") format("truetype"),url("Fonts/856be3c6-ad7c-49a8-8ef9-c012310211ba.svg#856be3c6-ad7c-49a8-8ef9-c012310211ba") format("svg");
+font-weight: 300;
+font-style: normal;
+    }
+    @font-face{
+        font-family:"FF Kievit W01_n4";
+        src:url("Fonts/fb3c91b9-5c75-4eb8-a6ed-ace50fedff33.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Kievit";
+        src:url("Fonts/fb3c91b9-5c75-4eb8-a6ed-ace50fedff33.eot?#iefix");
+        src:url("Fonts/fb3c91b9-5c75-4eb8-a6ed-ace50fedff33.eot?#iefix") format("eot"),url("Fonts/7b5039a3-ee79-4236-a97e-48c6110c164c.woff2") format("woff2"),url("Fonts/2e131f2c-7691-4f85-8905-97531faeaac9.woff") format("woff"),url("Fonts/736fe132-7eed-4a6e-a6a9-dd2df9e52957.ttf") format("truetype"),url("Fonts/84b64e99-cac9-4634-b833-5056b83e436f.svg#84b64e99-cac9-4634-b833-5056b83e436f") format("svg");
+font-weight: 400;
+font-style: normal;
+    }
+    @font-face{
+        font-family:"FF Kievit W03_n5";
+        src:url("Fonts/9f34e975-9971-45ab-9004-475db83406ad.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Kievit";
+        src:url("Fonts/9f34e975-9971-45ab-9004-475db83406ad.eot?#iefix");
+        src:url("Fonts/9f34e975-9971-45ab-9004-475db83406ad.eot?#iefix") format("eot"),url("Fonts/8e9fa79e-7be4-434c-9951-bb577789752d.woff2") format("woff2"),url("Fonts/96bab4bd-f30c-46c9-b618-d89a333336c7.woff") format("woff"),url("Fonts/9261ee23-78d6-4e9f-9de5-480f795c754a.ttf") format("truetype"),url("Fonts/d463f7fd-e9cc-47a2-bfbc-037616a19e97.svg#d463f7fd-e9cc-47a2-bfbc-037616a19e97") format("svg");
+font-weight: 500;
+font-style: normal;
+    }
+    @font-face{
+        font-family:"FF Kievit W03_n7";
+        src:url("Fonts/2a203b1a-9b6d-4b4c-9465-da5adbd64303.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Kievit";
+        src:url("Fonts/2a203b1a-9b6d-4b4c-9465-da5adbd64303.eot?#iefix");
+        src:url("Fonts/2a203b1a-9b6d-4b4c-9465-da5adbd64303.eot?#iefix") format("eot"),url("Fonts/6111a3c3-8891-4abd-ab61-c786139e0ba3.woff2") format("woff2"),url("Fonts/56c57025-d225-4399-b820-776d49f59b36.woff") format("woff"),url("Fonts/67960b09-90fa-42a8-93ee-ef48c0ec23e6.ttf") format("truetype"),url("Fonts/5fb703d2-8175-4217-a05b-5bae8a3b89f5.svg#5fb703d2-8175-4217-a05b-5bae8a3b89f5") format("svg");
+font-weight: 700;
+font-style: normal;
+    }
+    @font-face{
+        font-family:"FF Kievit W03_n7";
+        src:url("Fonts/6a562f9c-417b-4a78-ae89-701a959af4d4.eot?#iefix") format("eot")
+    }
+    @font-face{
+        font-family:"Kievit";
+        src:url("Fonts/6a562f9c-417b-4a78-ae89-701a959af4d4.eot?#iefix");
+        src:url("Fonts/6a562f9c-417b-4a78-ae89-701a959af4d4.eot?#iefix") format("eot"),url("Fonts/96b534c5-0453-44d5-b1cd-f4711b4dcb4d.woff2") format("woff2"),url("Fonts/730a576b-c124-409a-87cd-429906998d97.woff") format("woff"),url("Fonts/bdb63732-38a3-4ed3-957d-529fe7c7215b.ttf") format("truetype"),url("Fonts/1f4f136c-8b47-40aa-9bb6-12dc623737eb.svg#1f4f136c-8b47-40aa-9bb6-12dc623737eb") format("svg");
+font-weight: 900;
+font-style: normal;
+    }
