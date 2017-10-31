@@ -72,6 +72,9 @@ h1,h2,h3,h4{
   margin-top:0;
   color:#164491;
 }
+h1{
+  font-size:20px;
+}
 
 a{
   -webkit-transition:all .3s ease;
@@ -378,6 +381,26 @@ a{
   font-style:italic;
 }
 
+#meetJudie{
+  margin-top:100px;
+  margin-bottom:100px;
+}
+#meetJudie>.container{
+  max-width:840px;
+}
+#meetJudie .col-sm-6{
+  background-color:#f2f2f2;
+  padding-top:25px;
+  padding-bottom:25px;
+}
+#meetJudie .image-side{
+  height:470px;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+#meetJudie .btn-main{
+  margin-top:20px;
+}
 
 .form-control{
   border:none;
