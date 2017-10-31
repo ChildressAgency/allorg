@@ -1,7 +1,8 @@
 jQuery(document).ready(function($){
+
+  //header search animations
   $('.ico-search').on('click', function(e){
     e.preventDefault();
-    //$('.header-search-form').css('display', 'block');
     $('.header-search-form').show('fast', 'linear');
   });
   $('.dismiss-search-form').on('click', function(){
@@ -12,5 +13,6 @@ jQuery(document).ready(function($){
     if(!container.is(e.target) && container.has(e.target).length ===0){
       container.hide('fast', 'linear');
     }
-  })
+  });
+  
 });
