@@ -14,5 +14,14 @@ jQuery(document).ready(function($){
       container.hide('fast', 'linear');
     }
   });
-  
+
+  if (typeof $.fn.swiperight == 'function') {
+    $('.carousel.slide').swiperight(function () {
+      $(this).carousel('prev');
+    });
+    $('.carousel.slide').swipeleft(function () {
+      $(this).carousel('next');
+    });
+  }
+
 });

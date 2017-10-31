@@ -271,6 +271,54 @@ a{
 .carousel-fade .carousel-control {
   z-index: 2;
 }
+#heroCarousel .item{
+  min-height:360px;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+#heroCarousel .carousel-caption{
+  max-width:275px;
+  background-color:#f3f4f5;
+  padding:15px;
+  text-shadow:none;
+  text-align:left;
+}
+#heroCarousel .carousel-caption>h1{
+  font-size:18px;
+  color:#ec2730;
+  margin-bottom:0;
+}
+#heroCarousel .category{
+  color:#224182;
+  font-weight:700;
+  font-size:12px;
+}
+#heroCarousel .carousel-caption>p{
+  color:#000;
+  margin-top:8px;
+  line-height:1.2em;
+}
+#heroCarousel .read-more{
+  color:#224182;
+  font-weight:500;
+}
+#heroCarousel .carousel-nav{
+  position:absolute;
+  right:10px;
+  bottom:0;
+}
+#heroCarousel .carousel-nav>a{
+  font-size:20px;
+  color:#224182;
+}
+#heroCarousel .carousel-nav>.carousel-nav-left{
+  margin-right:5px;
+}
+#heroCarousel .carousel-nav>a:hover,
+#heroCarousel .carousel-nav>a:focus{
+  color:#ec2730;
+  text-decoration:none;
+}
 
 .form-control{
   border:none;
