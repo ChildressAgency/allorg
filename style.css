@@ -65,6 +65,7 @@ font-style: normal;
 body{
   font-family:Kievit, sans-serif;
   font-weight:400;
+  overflow-x:hidden;
 }
 
 h1,h2,h3,h4{
@@ -168,21 +169,81 @@ a{
   padding-top:5px;
   padding-bottom:5px;
 }
-.main-nav .navbar-nav>li>a{
+.main-nav .navbar-nav>li>a,
+.main-nav .dropdown-menu>li>a{
   color:#224182;
   text-transform:uppercase;
   font-weight:500;
 }
 .main-nav .navbar-nav>li.active>a,
 .main-nav .navbar-nav>li>a:hover,
-.main-nav .navbar-nav>li>a:focus{
+.main-nav .navbar-nav>li>a:focus,
+.main-nav .dropdown-menu>li.active>a,
+.main-nav .dropdown-menu>li.active>a:hover, 
+.main-nav .dropdown-menu>li.active>a:focus,
+.main-nav .dropdown-menu>li>a:hover,
+.main-nav .dropdown-menu>li>a:focus{
   background-color:transparent;
   color:#ec2730;
   text-decoration:none;
 }
-
+.main-nav .dropdown:hover .dropdown-menu{
+  display:block;
+  margin-top:0;
+}
+.navbar-toggle{
+  border-color:#224182;
+}
+.navbar-toggle .icon-bar{
+  background-color:#ec2730;
+}
+.menu-store-cart{
+  padding:15px;
+}
+.menu-store-cart>a{
+  color:#224182;
+  text-transform:uppercase;
+  font-weight:500;
+}
+.menu-store-cart>a:hover,
+.menu-store-cart>a:focus{
+  color:#ec2730;
+  text-decoration:none;
+}
+.menu-store-cart>a+a{
+  margin-left:15px;
+}
+#header-nav{
+  position:relative;
+}
 .header-search-form{
+  position:absolute;
+  width:250px;
   display:none;
+  right:0;
+  background-color:#244182;
+  padding:0px 15px 15px;
+  z-index:999;
+  box-shadow:2px 2px 7px #666;
+}
+.dismiss-search-form{
+  display:block;
+  text-align:right;
+  color:#fff;
+  font-size:20px;
+  cursor:pointer;
+}
+.header-search-form .input-group-btn>.btn{
+  border-radius:0;
+  background-color:#ec2730;
+  color:#fff;
+  -webkit-transition:all .3s ease;
+  transition:all .3s ease;
+}
+.header-search-form .input-group-btn>.btn:hover,
+.header-search-form .input-group-btn>.btn:focus{
+  background-color:#f1f1f1;
+  color:#224182;
 }
 
 .carousel-fade .carousel-inner .item {
@@ -211,8 +272,26 @@ a{
   z-index: 2;
 }
 
+.form-control{
+  border:none;
+  background-color:#f1f1f1;
+}
 
 
+@media (max-width:767px){
+  .header-logo{
+    padding-left:15px;
+  }
+  .register-login{
+    padding:0px 10px;
+  }
+  .header-search-form{
+    display:block !important;
+    position:relative;
+    margin-bottom:10px;
+    padding-top:15px;
+  }
+}
 @media (min-width:768px){
   .container-sm-height{
     display:table;
@@ -224,5 +303,10 @@ a{
     display:table-cell;
     float:none;
     vertical-align:middle;
+  }
+}
+@media (min-width:992px){
+  #navbar{
+    margin-top:20px;
   }
 }
