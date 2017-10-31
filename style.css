@@ -61,3 +61,82 @@ font-style: normal;
 font-weight: 900;
 font-style: normal;
     }
+
+body{
+  font-family:Kievit, sans-serif;
+  font-weight:400;
+}
+
+h1,h2,h3,h4{
+  margin-top:0;
+  color:#164491;
+}
+
+a{
+  -webkit-transition:all .3s ease;
+  transition:all .3s ease;
+}
+.btn-main{
+  display:inline-block;
+  color:#fff;
+  background-color:#ec2730;
+  text-transform:uppercase;
+  padding:5px 25px;
+}
+.btn-main:hover,
+.btn-main:focus{
+  background-color:#224182;
+  text-decoration:none;
+}
+.btn-main.btn-donate{
+  background-color:#224182;
+  font-size:24px;
+  font-weight:700;
+}
+.btn-main.btn-donate:hover,
+.btn-main.btn-donate:focus{
+  color:#224182;
+  background-color:#fff;
+}
+
+.carousel-fade .carousel-inner .item {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+
+
+@media (min-width:768px){
+  .container-sm-height{
+    display:table;
+  }
+  .row-sm-height{
+    display:table-row;
+  }
+  .col-sm-height{
+    display:table-cell;
+    float:none;
+    vertical-align:middle;
+  }
+}
