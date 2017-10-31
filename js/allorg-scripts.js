@@ -15,6 +15,7 @@ jQuery(document).ready(function($){
     }
   });
 
+  //carousel swipe navigation
   if (typeof $.fn.swiperight == 'function') {
     $('.carousel.slide').swiperight(function () {
       $(this).carousel('prev');
