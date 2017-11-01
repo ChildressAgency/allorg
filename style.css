@@ -402,9 +402,144 @@ a{
   margin-top:20px;
 }
 
+#donate{
+  color:#fff;
+  background-color:#ec2730;
+  padding-top:40px;
+  padding-bottom:40px;
+  text-align:center;
+}
+#donate h1{
+  font-size:30px;
+  color:#fff;
+  margin-bottom:5px;
+  font-weight:700;
+}
+#donate h2{
+  font-size:28px;
+  color:#fff;
+  font-weight:300;
+  margin-bottom:0px;
+}
+#donate p{
+  font-size:18px;
+}
+#donate .btn-main{
+  margin-top:25px;
+}
+
+#amazon-smile{
+  background-color:#f2f2f2;
+  padding-top:40px;
+  padding-bottom:40px;
+  text-align:center;
+}
+#amazon-smile h3{
+  font-size:18px;
+  font-weight:700;
+  margin-top:10px;
+  margin-bottom:20px;
+}
+#amazon-smile h3>span{
+  color:#ec2730;
+}
+
+#newsletterSocial{
+  text-align:center;
+  padding-top:40px;
+  padding-bottom:40px;
+}
+.newsletter-signup{
+  max-width:375px;
+  margin-left:auto;
+  margin-right:auto;
+}
+#newsletterSocial .social{
+  margin-top:25px;
+}
+#newsletterSocial .social>a{
+  font-size:40px;
+  color:#ec2730;
+}
+#newsletterSocial .social>a+a{
+  margin-left:20px;
+}
+#newsletterSocial .social>a:hover,
+#newsletterSocial .social>a:focus{
+  color:#224182;
+  text-decoration:none;
+}
+
 .form-control{
   border:none;
   background-color:#f1f1f1;
+}
+
+footer{
+  padding-bottom:25px;
+}
+#footer-nav{
+  background-color:#f2f2f2;
+}
+#footer-nav .nav>li>a{
+  color:#000;
+  text-transform:uppercase;
+}
+.footer-main{
+  padding-top:25px;
+  padding-bottom:25px;
+}
+.footer-main h4{
+  font-size:14px;
+  text-transform:uppercase;
+  margin-bottom:5px;
+  margin-top:15px;
+}
+.footer-main p{
+  margin-bottom:0;
+}
+.purchase-nav{
+  list-style:none;
+  padding-left:0;
+  column-count:2;
+  column-gap:25px;
+}
+.purchase-nav>li>a{
+  color:#000;
+}
+.purchase-nav>li>a:hover,
+.purchase-nav>li>a:focus{
+  color:#000;
+  text-decoration:underline;
+}
+.footer-main .social{
+  text-align:center;
+  margin-top:25px;
+}
+.footer-main .social>a{
+  font-size:18px;
+  color:#ec2730;
+}
+.footer-main .social>a+a{
+  margin-left:15px;
+}
+.footer-main .social>a:hover,
+.footer-main .social>a:focus{
+  color:#224182;
+  text-decoration:none;
+}
+.related-sites{
+  text-align:center;
+}
+.related-sites ul>li{
+  vertical-align:middle;
+  margin:15px;
+}
+.copyright{
+  text-align:center;
+}
+.copyright p{
+  margin-bottom:0;
 }
 
 
@@ -420,6 +555,14 @@ a{
     position:relative;
     margin-bottom:10px;
     padding-top:15px;
+  }
+  .footer-main{
+    text-align:center;
+  }
+  .purchase-nav{
+    max-width:300px;
+    margin-left:auto;
+    margin-right:auto;
   }
 }
 @media (min-width:768px){
