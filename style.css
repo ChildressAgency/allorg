@@ -383,13 +383,15 @@ img.alignright,
   float:left;
   padding-top:5px;
 }
-.breadcrumbs ul>li{
-  color:#164491;
+.breadcrumbs ul>li>a{
+  color:#224182;
   text-transform:uppercase;
   font-weight:500;
 }
-.breadcrumbs ul>li:first-child>a{
+.breadcrumbs ul>li:last-child{
   color:#ec2730;
+  text-transform:uppercase;
+  font-weight:500;
 }
 .breadcrumbs .list-inline>li{
   padding-right:0;
@@ -787,6 +789,12 @@ blockquote.epic-fashion footer>span{
 #leadershipModal .member-bio ul{
   list-style:none;
   padding-left:0;
+}
+
+.timeline-container{
+  height:450px;
+  overflow-y:scroll;
+  position:relative;
 }
 
 
