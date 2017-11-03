@@ -75,8 +75,16 @@ h1,h2,h3,h4{
 h1{
   font-size:20px;
 }
+h2{
+  font-size:18px;
+}
+h3{
+  font-size:16px;
+}
 
 a{
+  color:#224182;
+  font-weight:700;
   -webkit-transition:all .3s ease;
   transition:all .3s ease;
 }
@@ -103,6 +111,38 @@ a{
 .btn-main.btn-donate:focus{
   color:#224182;
   background-color:#fff;
+}
+
+img.aligncenter,
+img.alignnone,
+.aligncenter img,
+.alignnone img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  margin:25px auto;
+}
+img.alignleft,
+.alignleft img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  float:left;
+  margin:25px 25px 25px 0px;
+}
+img.alignright,
+.alignright img{
+  display:block;
+  max-width:100%;
+  height:auto;
+  float:right;
+  margin:25px 0px 25px 25px;
+}
+.wp-caption{
+  max-width:100%;
+}
+.wp-caption img{
+  margin-bottom:0px;
 }
 
 .masthead{
@@ -251,6 +291,20 @@ a{
   color:#224182;
 }
 
+.hero{
+  background-repeat:no-repeat;
+  background-size:cover;
+  padding-top:60px;
+  padding-bottom:60px;
+}
+.hero .caption{
+  font-size:36px;
+  font-weight:900;
+  text-transform:uppercase;
+  color:#fff;
+  text-align:center;
+}
+
 .carousel-fade .carousel-inner .item {
   -webkit-transition-property: opacity;
   transition-property: opacity;
@@ -321,6 +375,44 @@ a{
 }
 #heroCarousel .carousel-nav>a:hover,
 #heroCarousel .carousel-nav>a:focus{
+  color:#ec2730;
+  text-decoration:none;
+}
+
+.breadcrumbs{
+  float:left;
+  padding-top:5px;
+}
+.breadcrumbs ul>li{
+  color:#164491;
+  text-transform:uppercase;
+  font-weight:500;
+}
+.breadcrumbs ul>li:first-child>a{
+  color:#ec2730;
+}
+.breadcrumbs .list-inline>li{
+  padding-right:0;
+  padding-left:0;
+}
+.breadcrumbs ul>li+li:before{
+  content:'.';
+  color:#ec2730;
+  font-weight:900;
+  padding:0px 5px;
+}
+.print-share{
+  float:right;
+}
+.print-share>a{
+  font-size:24px;
+  color:#224182;
+}
+.print-share>a+a{
+  margin-left:10px;
+}
+.print-share>a:hover,
+.print-share>a:focus{
   color:#ec2730;
   text-decoration:none;
 }
@@ -540,6 +632,161 @@ footer{
 }
 .copyright p{
   margin-bottom:0;
+}
+
+#main{
+  padding-top:40px;
+  padding-bottom:40px;
+}
+
+.container.narrow{
+  max-width:650px;
+}
+
+#missionStatement{
+  padding-top:25px;
+  padding-bottom:40px;
+}
+#missionStatement h2{
+  text-transform:uppercase;
+  color:#ec2730;
+}
+#missionStatement p{
+  font-size:24px;
+  color:#224182;
+  line-height:1.2em;
+}
+#missionStatement .btn-main{
+  margin-top:25px;
+  font-size:14px;
+}
+
+.acronym{
+  list-style:none;
+  padding-left:0;
+}
+.acronym>li{
+  font-size:50px;
+  text-transform:uppercase;
+  color:#224182;
+  line-height:1.1em;
+}
+.acronym>li::first-letter{
+  color:#ec2730;
+  font-weight:900;
+}
+.epic-vision-mission{
+  background-color:#f2f2f2;
+  padding:20px;
+  color:#224182;
+  line-height:1.2em;
+}
+.epic-vision-mission h2{
+  text-transform:uppercase;
+  color:#ec2730;
+  margin-bottom:0px;
+}
+blockquote.epic-fashion{
+  border-left:none;
+  padding-left:0;
+}
+blockquote.epic-fashion p{
+  font-size:18px;
+  font-weight:700;
+  color:#224182;
+  margin-bottom:0;
+}
+blockquote.epic-fashion p>span{
+  color:#ec2730;
+  font-weight:900
+}
+blockquote.epic-fashion footer{
+  font-weight:400;
+  color:#224182;
+}
+blockquote.epic-fashion footer:before{
+  content:"";
+}
+blockquote.epic-fashion footer>span{
+  font-weight:900;
+  text-transform:uppercase;
+  display:block;
+}
+
+#culture-life-death article{
+  background-color:#f2f2f2;
+  padding:7% 10%;
+}
+#culture-life-death h2{
+  color:#ec2730;
+  text-transform:uppercase;
+}
+
+#leadershipTeam{
+  padding-top:40px;
+  padding-bottom:40px;
+  text-align:center;
+}
+#leadershipTeam h1{
+  color:#ec2730;
+}
+.team-member-card{
+  display:block;
+  margin-top:25px;
+}
+.team-member-card h2{
+  margin-top:10px;
+  margin-bottom:0;
+  color:#ec2730;
+  text-transform:uppercase;
+}
+.modal-backdrop{
+  background-color:rgba(34,65,130,1);
+}
+.modal-backdrop.in{
+  opacity:.9;
+}
+#leadershipModal .modal-content{
+  background-color:transparent;
+  color:#fff;
+  box-shadow:none;
+  border:none;
+}
+#leadershipModal .modal-header{
+  border-bottom:none;
+}
+#leadershipModal .modal-header>h3{
+  color:#fff;
+  font-size:20px;
+  font-weight:400;
+  text-align:center;
+}
+#leadershipModal .modal-header>.close{
+  color:#fff;
+  font-size:35px;
+  font-weight:400;
+  text-shadow:none;
+  opacity:1;
+}
+#leadershipModal .member-pic-name{
+  text-align:center;
+}
+#leadershipModal .member-name{
+  color:#ec2730;
+  text-transform:uppercase;
+  margin-top:10px;
+  margin-bottom:0;
+}
+#leadershipModal .member-bio{
+  line-height:1.2em;
+}
+#leadershipModal .member-bio h3{
+  color:#ec2730;
+  text-transform:uppercase;
+}
+#leadershipModal .member-bio ul{
+  list-style:none;
+  padding-left:0;
 }
 
 

@@ -25,4 +25,27 @@ jQuery(document).ready(function($){
     });
   }
 
+  //leadership modal
+  $('#leadershipModal').on('show.bs.modal', function(e){
+    var member = $(e.relatedTarget);
+    var memberName = member.data('member_name');
+    var memberTitle = member.data('member_title');
+    var memberImage = member.data('member_image');
+    var memberBio = member.data('member_bio');
+
+    var modal = $(this);
+    modal.find('.member-image').attr('src', memberImage);
+    modal.find('.member-name').text(memberName);
+    modal.find('.member-title').text(memberTitle);
+    modal.find('.member-bio').html(memberBio);
+  });
+  //clear modal fields for next open
+  $('#leadershipModal').on('hidden.bs.modal', function(){
+    var modal = $(this);
+    modal.find('.member-image').attr('src', '');
+    modal.find('.member-name').empty();
+    modal.find('.member-title').empty();
+    modal.find('.member-bio').empty();
+  });
+
 });
