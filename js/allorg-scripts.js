@@ -48,4 +48,19 @@ jQuery(document).ready(function($){
     modal.find('.member-bio').empty();
   });
 
+  //timeline
+  $(window).on('scroll', function(){
+    $('.timeline-event').each(function(){
+      var bottom_of_row = $(this).offset().top + $(this).outerHeight(false);
+      var bottom_of_window = $(window).scrollTop() + $(window).height() + 150;
+
+      if(bottom_of_window > bottom_of_row){
+        $(this).addClass('fadein');
+      }
+      else{
+        $(this).removeClass('fadein');
+      }
+    });
+  });
+
 });

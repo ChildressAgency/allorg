@@ -502,6 +502,8 @@ img.alignright,
   padding-top:40px;
   padding-bottom:40px;
   text-align:center;
+  position:relative;
+  z-index:2;
 }
 #donate h1{
   font-size:30px;
@@ -791,10 +793,176 @@ blockquote.epic-fashion footer>span{
   padding-left:0;
 }
 
+#learn-nav{
+  text-align:center;
+}
+#learn-nav>.container{
+  max-width:700px;
+  border-bottom:1px solid #e2e2e2;
+  padding-bottom:40px;
+}
+.nav.learn-nav a{
+  text-transform:uppercase;
+  color:#ec2730;
+  height:40px;
+}
+.nav.learn-nav a:hover,
+.nav.learn-nav a:focus,
+.nav.learn-nav>li.active a,
+.nav.learn-nav .open>a,
+.nav.learn-nav .open>a:focus,
+.nav.learn-nav .open>a:hover{
+  font-weight:900;
+  font-size:15px;
+  background-color:transparent;
+}
+/*
+.nav.learn-nav a:after{
+  display:block;
+  content:attr(title);
+  font-weight:900;
+  font-size:15px;
+  height:1px;
+  color:transparent;
+  overflow:hidden;
+  visibility:hidden;
+}*/
+.nav.learn-nav .dropdown-menu{
+  text-align:center;
+  right:0;
+}
+.nav.learn-nav .dropdown-menu>li>a{
+  white-space:normal;
+  color:#224182;
+  height:auto;
+}
+.nav.learn-nav .dropdown-menu>li>a:hover,
+.nav.learn-nav .dropdown-menu>li>a:focus,
+.nav.learn-nav .dropdown-menu>li.active>a{
+  font-size:14px;
+  font-weight:400;
+  text-decoration:underline;
+  background-color:transparent;
+}
+
 .timeline-container{
-  height:450px;
-  overflow-y:scroll;
   position:relative;
+}
+.timeline-container>span{
+  position:absolute;
+  height:100%;
+  width:2px;
+  background-color:#ec2730;
+  top:45px;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+}
+.timeline-event{
+  position:relative;
+  display:block;
+  margin-bottom:40px;
+  display:table;
+  width:100%;
+  word-break:break-word;
+  opacity:0;
+  top:300px;
+  -webkit-transition:all .3s ease;
+  transition:all .3s ease;
+}
+.timeline-event.fadein{
+  opacity:1;
+  top:0;
+}
+.timeline-event:after{
+  content:"";
+  display:table;
+  clear:both;
+}
+.timeline-event>span{
+  position:absolute;
+  height:150%;
+  width:2px;
+  background-color:#ec2730;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  top:50%;
+}
+.timeline-event:first-child .event-year:after{
+  content:"";
+  position:absolute;
+  height:50%;
+  width:2px;
+  background-color:#fff;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  top:0;
+}
+.timeline-event:last-child .event-year:after{
+  content:"";
+  position:absolute;
+  height:150%;
+  width:2px;
+  background-color:#fff;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  top:50%;
+}
+.event-year{
+  font-size:72px;
+  /*float:left;*/
+  width:49%;
+  line-height:1em;
+  text-align:right;
+  color:#224182;
+  font-weight:700;
+  height:100%;
+  display:table-cell;
+  vertical-align:middle;
+  padding-bottom:20px;
+  padding-right:40px;
+}
+.event{
+  display:table-cell;
+  height:100%;
+  vertical-align:middle;
+  width:49%;
+  padding-left:60px;
+}
+.event:before{
+  content:"";
+  position:absolute;
+  height:14px;
+  width:14px;
+  border:1px solid #ec2730;
+  top:50%;
+  left:50%;
+  margin-left:-7px;
+  margin-top:-7px;
+  border-radius:50%;
+  background-color:#fff;
+}
+
+#learn-pagination{
+  background-color:#f2f2f2;
+  text-align:center;
+  position:relative;
+  z-index:3;
+}
+#learn-pagination .nav>li{
+  font-weight:500;
+}
+#learn-pagination .nav>li>a{
+  display:inline-block;
+  font-weight:500;
+  text-transform:uppercase;
 }
 
 
@@ -818,6 +986,30 @@ blockquote.epic-fashion footer>span{
     max-width:300px;
     margin-left:auto;
     margin-right:auto;
+  }
+  .timeline-container>span{
+    top:12px;
+    margin-left:37%;
+  }
+  .event-year{
+    width:35%;
+    padding-right:15px;
+    font-size:30px;
+    vertical-align:top;
+  }
+  .event{
+    padding-left:25px;
+    width:65%;
+    vertical-align:top;
+  }
+  .event:before{
+    top:0;
+    left:37%;
+    margin-left:-10px;
+    margin-top:10px;
+  }
+  .timeline-event:last-child .event-year:after{
+    display:none;
   }
 }
 @media (min-width:768px){
