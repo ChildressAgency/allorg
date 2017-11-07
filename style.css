@@ -975,6 +975,25 @@ blockquote.epic-fashion footer>span{
   margin-left:15px;
 }
 
+#creation-carousel .carousel-indicators{
+  width:auto;
+  left:0;
+  text-align:left;
+  margin-left:0;
+  bottom:auto;
+}
+#creation-carousel .carousel-indicators li{
+  text-indent:unset;
+  display:block;
+  border:none;
+  height:auto;
+  width:auto;
+  margin:1px;
+}
+#creation-carousel .carousel-indicators li.active{
+  height:auto;
+  width:auto;
+}
 .creation-nav{
   float:left;
   margin-left:10%;
@@ -1009,7 +1028,7 @@ blockquote.epic-fashion footer>span{
   border-radius:50%;
   background-color:#fff;
   top:11px;
-  left:-7px;
+  left:-8px;
 }
 .creation-nav .nav>li.active:before{
   background-color:#ec2730;
@@ -1021,6 +1040,9 @@ blockquote.epic-fashion footer>span{
   text-transform:uppercase;
   color:#ec2730;
   font-weight:700;
+}
+#creation-carousel .item{
+  
 }
 
 
@@ -1069,6 +1091,16 @@ blockquote.epic-fashion footer>span{
   .timeline-event:last-child .event-year:after{
     display:none;
   }
+  #creation-carousel .carousel-indicators li,
+  #creation-carousel .carousel-indicators li.active{
+    height:40px !important;
+  }
+  .creation-nav .nav>li>a{
+    display:none;
+  }
+  #creation-carousel .carousel-inner .item{
+    padding-left:15px;
+  }
 }
 @media (min-width:768px){
   .container-sm-height{
@@ -1088,8 +1120,18 @@ blockquote.epic-fashion footer>span{
     height:100%;
   }
 }
+@media (max-width:991px){
+  #creation-carousel .container.narrow{
+    max-width:300px;
+  }
+}
 @media (min-width:992px){
   #navbar{
     margin-top:20px;
   }
+}
+@media (max-width:1199px){
+  .creation-nav{
+    margin-left:5%;
+  }  
 }
