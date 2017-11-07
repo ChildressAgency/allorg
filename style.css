@@ -646,6 +646,7 @@ footer{
 #main{
   padding-top:40px;
   padding-bottom:40px;
+  position:relative;
 }
 
 .container.narrow{
@@ -972,6 +973,54 @@ blockquote.epic-fashion footer>span{
 
 .newsletter-signup .btn-alt{
   margin-left:15px;
+}
+
+.creation-nav{
+  float:left;
+  margin-left:10%;
+}
+.creation-nav .nav>li>a{
+  text-transform:uppercase;
+  font-weight:400;
+  color:#ec2730;
+}
+.creation-nav .nav>li>a:hover,
+.creation-nav .nav>li>a:focus{
+  background-color:transparent;
+}
+.creation-nav .nav{
+  position:relative;
+}
+.creation-nav .nav:before{
+  content:"";
+  position:absolute;
+  height:91%;
+  width:1px;
+  background-color:#ec2730;
+  display:block;
+  top:15px;
+}
+.creation-nav .nav>li:before{
+  content:"";
+  position:absolute;
+  width:15px;
+  height:15px;
+  border:1px solid #ec2730;
+  border-radius:50%;
+  background-color:#fff;
+  top:11px;
+  left:-7px;
+}
+.creation-nav .nav>li.active:before{
+  background-color:#ec2730;
+}
+.creation-tabs{
+  padding-top:60px;
+}
+.creation-tabs h3{
+  text-transform:uppercase;
+  color:#ec2730;
+  font-weight:700;
 }
 
 
