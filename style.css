@@ -95,6 +95,7 @@ a{
   text-transform:uppercase;
   padding:10px 45px;
   font-weight:300;
+  border:none;
 }
 .btn-main:hover,
 .btn-main:focus{
@@ -1041,9 +1042,25 @@ blockquote.epic-fashion footer>span{
   color:#ec2730;
   font-weight:700;
 }
-#creation-carousel .item{
-  
+
+/*default pagenavi plugin css*/
+.wp-pagenavi {
+	clear: both;
 }
+.wp-pagenavi a, .wp-pagenavi span {
+	text-decoration: none;
+	border: 1px solid #BFBFBF;
+	padding: 3px 5px;
+  margin: 2px;
+  border:none;
+}
+.wp-pagenavi a:hover, .wp-pagenavi span.current {
+	border-color: #000;
+}
+.wp-pagenavi span.current {
+	font-weight: bold;
+}
+/*end default pagenavi css*/
 
 
 @media (max-width:767px){
