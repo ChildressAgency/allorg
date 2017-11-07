@@ -112,6 +112,9 @@ a{
   color:#224182;
   background-color:#fff;
 }
+.btn-alt{
+  background-color:#fbb03b;
+}
 
 img.aligncenter,
 img.alignnone,
@@ -569,6 +572,8 @@ img.alignright,
 .form-control{
   border:none;
   background-color:#f1f1f1;
+  border-radius:0;
+  box-shadow:none;
 }
 
 footer{
@@ -963,6 +968,10 @@ blockquote.epic-fashion footer>span{
   display:inline-block;
   font-weight:500;
   text-transform:uppercase;
+}
+
+.newsletter-signup .btn-alt{
+  margin-left:15px;
 }
 
 
