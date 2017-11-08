@@ -65,7 +65,169 @@ function allorg_styles(){
 }
 
 add_theme_support('post-thumbnails');
-register_nav_menu( 'header-nav', 'Header Navigation' );
+//register_nav_menu( 'header-nav', 'Header Navigation' );
+add_action('init', 'allorg_register_menus');
+function allorg_register_menus(){
+  register_nav_menus(
+    array(
+      'header-nav' => 'Header Navigation',
+      'learn-nav-left' => 'Learn Navigation Left',
+      'learn-nav-center' => 'Learn Navigation Center',
+      'learn-nav-right' => 'Learn Navigation Right'
+    )
+  );
+}
+
+function allorg_learn_nav_left_fallback(){ ?>
+  <ul class="nav learn-nav">
+    <li<?php if(is_page('the-preborn-baby')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('the-preborn-baby'); ?>" title="The Preborn Baby">The Preborn Baby</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle<?php if(is_page('abortion') || 
+                                                  is_page('abortion-history') || 
+                                                  is_page('statistics') || 
+                                                  is_page('methods') || 
+                                                  is_page('exceptions')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="abortion">Abortion</a>
+      <ul class="dropdown-menu">
+        <li><a href="<?php echo home_url('abortion'); ?>">Abortion</a></li>
+        <li><a href="<?php echo home_url('abortion-history'); ?>">History</a></li>
+        <li><a href="<?php echo home_url('statistice'); ?>">Statistics</a></li>
+        <li><a href="<?php echo home_url('methods'); ?>">Methods</a></li>
+        <li><a href="<?php echo home-url('exceptions'); ?>">Exceptions</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle<?php if(is_page('contraception') || 
+                                                  is_page('words-matter') || 
+                                                  is_page('abortion-connection') || 
+                                                  is_page('naturally-spacing-children')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Contraception">Contraception</a>
+      <ul class="dropdown-menu">
+        <li><a href="<?php echo home_url('contraception'); ?>">Contraception</a></li>
+        <li><a href="<?php echo home_url('words-matter'); ?>">Words Matter</a></li>
+        <li><a href="<?php echo home_url('abortion-connection'); ?>">Abortion Connection</a></li>
+        <li><a href="<?php echo home_url('naturally-spacing-children'); ?>">Naturally Spacing Children (NFP)</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle<?php if(is_page('euthanasia') ||
+                                                  is_page('euthanasia-history') ||
+                                                  is_page('definitions') ||
+                                                  is_page('strategy-and-analysis-of-strategic-concepts') ||
+                                                  is_page('law-and-suicide') ||
+                                                  is_page('arguments-against-euthanasia') ||
+                                                  is_page('physician-assisted-suicide') ||
+                                                  is_page('the-lving-will') ||
+                                                  is_page('legislators-medical-policy-manual') ||
+                                                  is_page('the-schiavo-case-and-death-by-dehydration') ||
+                                                  is_page('ordinary-vs-extraordinary-care') ||
+                                                  is_page('living-wills-and-advanced-directives') ||
+                                                  is_page('end-of-life-issues-guide-decision-making-by-patie') ||
+                                                  is_page('miracles')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Euthanasia">Euthanasia</a>
+      <ul class="dropdown-menu">
+        <li><a href="<?php echo home_url('euthanasia'); ?>">Euthanasia</a></li>
+        <li><a href="<?php echo home_url('history'); ?>">History</a></li>
+        <li><a href="<?php echo home_url('definitions'); ?>">Definitions</a></li>
+        <li><a href="<?php echo home_url('strategy-and-analysis-of-strategic-concepts'); ?>">Strategy and Analysis of Strategic Concepts</a></li>
+        <li><a href="<?php echo home_url('law-and-suicide'); ?>">Law and Suicide</a></li>
+        <li><a href="<?php echo home_url('arguments-against-euthanasia'); ?>">Arguments Against Euthanasia</a></li>
+        <li><a href="<?php echo home_url('physician-assisted-suicide'); ?>">Physician Assisted Suicide</a></li>
+        <li><a href="<?php echo home_url('the-loving-will'); ?>">The Loving Will</a></li>
+        <li><a href="<?php echo home_url('legislators-medical-policy-manual'); ?>">Legislators' Medical Policy Manual</a></li>
+        <li><a href="<?php echo home_url('the_schiavo-case-and-death-by-dehydration'); ?>">The Schiavo Case and Death by Dehydration</a></li>
+        <li><a href="<?php echo home_url('ordinary-vs-extraordinary'); ?>">Ordinary vs. Extraordinary Care</a></li>
+        <li><a href="<?php echo home_url('living-wills-and-advanced-directives'); ?>">Living Wills and Advanced Directives</a></li>
+        <li><a href="<?php echo home_url('end-of-life-issues-guide-decision-making-by-patie'); ?>">End of Life Issues Guide: Decision Making by Patie</a></li>
+        <li><a href="<?php echo home_url('miracles'); ?>">Miracles</a></li>
+      </ul>
+    </li>
+  </ul>
+<?php }
+
+function allorg_learn_nav_center_fallback(){ ?>
+  <ul class="nav learn-nav">
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle<?php if(is_page('ivf') ||
+                                                  is_page('artificial-fertilization-and-the-catholic-response') ||
+                                                  is_page('embryo-adoption')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="IVF">IVF</a>
+      <ul class="dropdown-menu">
+        <li><a href="<?php echo home_url('ivf'); ?>">IVF</a></li>
+        <li><a href="<?php echo home_url('artificial-fertilization-and-the-catholic-response'); ?>">Artificial Fertilization and the Catholic Response</a></li>
+        <li><a href="<?php echo home_url('embryo-adoption'); ?>">Embryo Adoption</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle<?php if(is_page('organ-donation') ||
+                                                  is_page('when-is-a-person-really-dead') ||
+                                                  is_page('the-ventilator') ||
+                                                  is_page('do-i-have-to-spend-my-last-days-hooked-up-to-machines') ||
+                                                  is_page('understanding-brain-death') ||
+                                                  is_page('life-life-support-and-death') ||
+                                                  is_page('should-i-be-an-organ-donor')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Organ Donation">Organ Donation</a>
+      <ul class="dropdown-menu">
+        <li><a href="<?php echo home_url('organ-donation'); ?>">Organ Donation</a></li>
+        <li><a href="<?php echo home_url('when-is-a-person-really-dead'); ?>">When is a Person Really Dead?</a></li>
+        <li><a href="<?php echo home_url('the-ventilator'); ?>">The Ventilator</a></li>
+        <li><a href="<?php echo home_url('do-i-have-to-spend-my-last-days-hooked-up-to-machines'); ?>">Do I have to Spend my Last Days Hooked up to Machines?</a></li>
+        <li><a href="<?php echo home_url('understanding-brain-death'); ?>">Understanding Brain Death</a></li>
+        <li><a href="<?php echo home_url('life-life-support-and-death'); ?>">Life, Life Support and Death</a></li>
+        <li><a href="<?php echo home_url('should-i-be-an-organ-donor'); ?>">Should I be an Organ Donor?</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle<?php if(is_page('stem-cells') ||
+                                                  is_page('embryology') ||
+                                                  is_page('when-does-human-life-begin-the-final-answer') ||
+                                                  is_page('ethical-sources-of-stem-cells') ||
+                                                  is_page('aborted-fetal-tissue') ||
+                                                  is_page('human-cloning') ||
+                                                  is_page('church-teachings') ||
+                                                  is_page('variations-on-stem-cell-research') ||
+                                                  is_page('frozen embryos') ||
+                                                  is_page('moral-arguments') ||
+                                                  is_page('bioethics')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Stem Cells">Stem Cells</a>
+      <ul class="dropdown-menu">
+        <li><a href="<?php echo home_url('stem-cells'); ?>">Stem Cells</a></li>
+        <li><a href="<?php echo home_url('embryology'); ?>">Embryology</a></li>
+        <li><a href="<?php echo home_url('when-does-human-life-begin'); ?>">When does human life begin? The final answer</a></li>
+        <li><a href="<?php echo home_url('ethical-sources-of-stem-cells'); ?>">Ethical sources of stem cells</a></li>
+        <li><a href="<?php echo home_url('aborted-fetal-tissue'); ?>">Aborted Fetal Tissue</a></li>
+        <li><a href="<?php echo home_url('human-cloning'); ?>">Human Cloning</a></li>
+        <li><a href="<?php echo home_url('church-teachings'); ?>">Church Teachings</a></li>
+        <li><a href="<?php echo home_url('variations-on-stem-cell-research'); ?>">Variations on Stem Cell Research</a></li>
+        <li><a href="<?php echo home_url('frozen-embryos'); ?>">Frozen Embryos</a></li>
+        <li><a href="<?php echo home_url('moral arguments'): ?>">Moral Arguments</a></li>
+        <li><a href="<?php echo home_url('bioethics'); ?>">Bioethics</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle<?php if(is_page('planned-parenthood') ||
+                                                  is_page('margaret-sanger') ||
+                                                  is_page('guttmacher-institute') ||
+                                                  is_page('resources')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Planned Parenthood">Planned Parenthood</a>
+      <ul class="dropdown-menu">
+        <li><a href="<?php echo home_url('planned-parenthood'); ?>">Planned Parenthood</a></li>
+        <li><a href="<?php echo home_url('margaret-sanger'); ?>">Margaret Sanger</a></li>
+        <li><a href="<?php echo home_url('guttmacher-institute'); ?>">Guttmacher Institute</a></li>
+        <li><a href="<?php echo home_url('resources'); ?>">Resources</a></li>
+      </ul>
+    </li>
+  </ul>
+<?php }
+
+function allorg_learn_nav_right(){ ?>
+  <ul class="nav learn-nav">
+    <li<?php if(is_page('policy-politicians')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('policy-politicians'); ?>" title="Policy & Politicians">Policy & Politicians</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle<?php if(is_page('research') ||
+                                                  is_page('population-control')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Research">Research</a>
+      <ul class="dropdown-menu">
+        <li><a href="<?php echo home_url('research'); ?>">Research</a></li>
+        <li><a href="<?php echo home_url('population-control'); ?>">Population Control</a></li>
+      </ul>
+    </li>
+    <li<?php if(is_page('sex-education')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('sex-education'); ?>" title="Sex Education">Sex Education</a></li>
+  </ul>
+<?php }
+
 /**
  * Class Name: wp_bootstrap_navwalker
  * GitHub URI: https://github.com/twittem/wp-bootstrap-navwalker
