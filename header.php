@@ -121,9 +121,30 @@
       </div>
     </div>
   <?php else: ?>
-    <div class="hero" style="background-image:url(<?php the_field('hero_image'); ?>);<?php the_field('hero_image_css'); ?>">
+    <?php
+      $hero_image = get_stylesheet_directory_uri() . '/images/baby-with-umbilical.jpg';
+      $hero_image_css = 'background-position:center center;';
+      if(get_field('hero_image')){
+        $hero_image = get_field('hero_image');
+        if(get_field('hero_image_css')){
+          $hero_image_css = get_field('hero_image_css');
+        }
+        else{
+          $hero_image_css = '';
+        }
+      }
+    ?>
+    <div class="hero" style="background-image:url(<?php echo $hero_image; ?>);<?php echo hero_image_css; ?>">
       <div class="container">
-        <p class="caption"><?php the_field('hero_caption'); ?></p>
+        <?php 
+          if(get_field('hero_caption')){
+            $hero_caption = get_field('hero_caption');
+          }
+          else{
+            $hero_caption = get_the_title(); 
+          }
+        ?>
+        <p class="caption"><?php echo $hero_caption; ?></p>
       </div>
     </div>
   <?php endif; ?> 
