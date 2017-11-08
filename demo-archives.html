@@ -119,13 +119,14 @@
     </div>
   </div>
   <main id="main">
-    <div class="container">
+    <div class="container narrow">
       <div class="filters">
         <div class="form-inline">
           <div class="form-group">
             <label for="month" class="sr-only">Month</label>
             <select class="form-control">
               <option value="">Month</option>
+              <option value="0">All</option>
               <option value="01">January</option>
               <option value="02">February</option>
               <option value="03">March</option>
@@ -144,6 +145,7 @@
             <label for="year" class="sr-only">Year</label>
             <select class="form-control">
               <option value="">Year</option>
+              <option value="0">All</option>
               <option value="2010">2010</option>
               <option value="2011">2011</option>
               <option value="2012">2012</option>
@@ -158,6 +160,7 @@
             <label for="category" class="sr-only">Category</label>
             <select class="form-control">
               <option value="">Category</option>
+              <option value="0">All</option>
               <option value="1">Judie Brown Commentary</option>
               <option value="11">Press Releases</option>
               <option value="13">Guest Commentary</option>
@@ -171,7 +174,9 @@
               <option value="20">ALL Life Defenders</option>
             </select>
           </div>
-          <input type="submit" class="btn-main" value="Sign Up" />
+          <div class="form-group">
+            <input type="submit" class="btn-main" value="Filter" />
+          </div>
         </div>
       </div>
 
@@ -188,7 +193,7 @@
         <a href="#" class="nextpostslink" rel="next">>></a>
         <a href="#" class="last">Last &gt;</a>
       </div>
-      
+
       <div class="post-summary">
         <div class="row">
           <div class="col-sm-3 col-md-2">
@@ -232,7 +237,6 @@
       <div class="post-summary">
         <div class="row">
           <div class="col-sm-3 col-md-2">
-            <img src="images/general-kelly.jpg" class="img-responsive center-block" alt="" />
           </div>
           <div class="col-sm-9 col-md-10">
             <div class="row">
