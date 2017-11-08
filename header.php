@@ -87,65 +87,43 @@
     </div>
   </nav>
 
-  <div class="hero hp-hero">
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="">
-      <div class="carousel-inner">
-        <div class="item active" style="background-image:url(images/shocked-face.jpg); background-position:center center;">
-          <div class="carousel-caption">
-            <h1>Media Exhibits Fake Shock</h1>
-            <a href="#" class="category">Judie's Commentary</a>
-            <p>Unlike the fake shock uttered by the media when Trump pointed out the obvious with some tough talk, the matter we enumerate here have a real impact on how our nation respects human beings.</p>
-            <a href="#" class="read-more">READ MORE</a>
-            <div class="carousel-nav">
-              <a href="##heroCarousel" class="carousel-nav-left" role="button" data-slide="prev">
-                <i class="fa fa-caret-left"></i>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a href="#heroCarousel" class="carousel-nav-right" role="button" data-slide="next">
-                <i class="fa fa-caret-right"></i>
-                <span class="sr-only">Next</span>
-              </a>
+  <?php if(is_front_page()): ?>
+    <div class="hero hp-hero">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="">
+        <div class="carousel-inner">
+
+          <?php if(have_rows('hero_carousel_items')): $ci=0; while(have_rows('hero_carousel_items')): the_row(); ?>
+
+            <div class="item<?php if($ci==0){ echo ' active'; } ?>" style="background-image:url(<?php the_sub_field('carousel_item_image'); ?>);<?php the_sub_field('carousel_item_image_css'); ?>">
+              <div class="carousel-caption">
+                <h1><?php the_sub_field('carousel_item_title'); ?></h1>
+                <?php $carousel_item_category = get_sub_field('carousel_item_category');
+                  if($carousel_item_category): ?>
+                    <a href="<?php echo get_term_link($carousel_item_category); ?>" class="category"><?php echo $carousel_item_category->name; ?></a>
+                <?php endif; ?>
+                <p><?php the_sub_field('carousel_item_summary_text'); ?></p>
+                <a href="<?php echo the_sub_field('carousel_item_link'); ?>" class="read-more">READ MORE</a>
+                <div class="carousel-nav">
+                  <a href="#heroCarousel" class="carousel-nav-left" role="button" data-slide="prev">
+                    <i class="fa fa-caret-left"></i>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a href="#heroCarousel" class="carousel-nav-right" role="button" data-slide="next">
+                    <i class="fa fa-caret-right"></i>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="item" style="background-image:url(images/shocked-face.jpg); background-position:center center;">
-          <div class="carousel-caption">
-            <h1>Media Exhibits Fake Shock</h1>
-            <a href="#" class="category">Judie's Commentary</a>
-            <p>Unlike the fake shock uttered by the media when Trump pointed out the obvious with some tough talk, the matter we enumerate
-              here have a real impact on how our nation respects human beings.</p>
-            <a href="#" class="read-more">READ MORE</a>
-            <div class="carousel-nav">
-              <a href="##heroCarousel" class="carousel-nav-left" role="button" data-slide="prev">
-                <i class="fa fa-caret-left"></i>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a href="#heroCarousel" class="carousel-nav-right" role="button" data-slide="next">
-                <i class="fa fa-caret-right"></i>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="item" style="background-image:url(images/shocked-face.jpg); background-position:center center;">
-          <div class="carousel-caption">
-            <h1>Media Exhibits Fake Shock</h1>
-            <a href="#" class="category">Judie's Commentary</a>
-            <p>Unlike the fake shock uttered by the media when Trump pointed out the obvious with some tough talk, the matter we enumerate
-              here have a real impact on how our nation respects human beings.</p>
-            <a href="#" class="read-more">READ MORE</a>
-            <div class="carousel-nav">
-              <a href="##heroCarousel" class="carousel-nav-left" role="button" data-slide="prev">
-                <i class="fa fa-caret-left"></i>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a href="#heroCarousel" class="carousel-nav-right" role="button" data-slide="next">
-                <i class="fa fa-caret-right"></i>
-                <span class="sr-only">Next</span>
-              </a>
-            </div>
-          </div>
+          <?php $ci++; endwhile; endif; ?>
+
         </div>
       </div>
     </div>
-  </div>
+  <?php else: ?>
+    <div class="hero" style="background-image:url(<?php the_field('hero_image'); ?>);<?php the_field('hero_image_css'); ?>">
+      <div class="container">
+        <p class="caption"><?php the_field('hero_caption'); ?></p>
+      </div>
+    </div>
+  <?php endif; ?> 
