@@ -303,6 +303,9 @@ img.alignright,
   padding-top:60px;
   padding-bottom:60px;
 }
+.hero.hp-hero{
+  padding:0;
+}
 .hero .caption{
   font-size:36px;
   font-weight:900;
