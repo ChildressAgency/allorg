@@ -64,6 +64,7 @@ function allorg_styles(){
   wp_enqueue_style('allorg');
 }
 
+add_theme_support('post-thumbnails');
 register_nav_menu( 'header-nav', 'Header Navigation' );
 /**
  * Class Name: wp_bootstrap_navwalker

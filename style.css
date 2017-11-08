@@ -1183,3 +1183,23 @@ blockquote.epic-fashion footer>span{
     margin-left:5%;
   }  
 }
+
+@media print{
+  .breadcrumbs,
+  .navbar-toggle,
+  .masthead,
+  .print-share,
+  .filters,
+  .wp-pagenavi,
+  #footer-nav,
+  #donate,
+  #newsletterSocial,
+  #learn-nav,
+  #learn-pagination{
+    display:none;
+  }
+  .timeline-event{
+    opacity:1 !important;
+    top:0 !important;
+  }
+}
