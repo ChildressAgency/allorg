@@ -5,6 +5,7 @@
       <div class="container narrow">
         <?php if(have_posts()): while(have_posts()): the_post(); ?>
           <?php the_content(); ?>
+        <?php endwhile; endif; ?>
       </div>
     </article>
     <?php if(get_field('mission_statement')): ?>

@@ -7,10 +7,7 @@
     <div class="print-share">
       <a href="#" onclick="window.print();"><i class="fa fa-print"></i></a>
       <?php if(function_exists('ADDTOANY_SHARE_SAVE_KIT')){
-        ADDTOANY_SHARE_SAVE_KIT(array('use_current_page' => true));
-      } ?>
-      <?php if(function_exists('ADDTOANY_SHARE_SAVE_KIT')){
-        ADDTOANY_SHARE_SAVE_KIT(array('buttons' => array('email')));
+        ADDTOANY_SHARE_SAVE_KIT(array('use_current_page' => true, 'buttons' => array('email')));
       } ?>
     </div>
   </div>

@@ -1160,7 +1160,8 @@ blockquote.epic-fashion footer>span{
     vertical-align:middle;
   }
   .testimonial-sidebar{
-    position:absolute;
+    /*position:absolute;*/
+    float:right;
     right:0;
     height:100%;
   }
