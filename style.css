@@ -1183,6 +1183,11 @@ blockquote.epic-fashion footer>span{
     margin-left:5%;
   }  
 }
+@media (min-width:1400px){
+  .creation-nav{
+    margin-left:15%;
+  }
+}
 
 @media print{
   .breadcrumbs,
