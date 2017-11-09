@@ -21,7 +21,7 @@
         <div class="col-sm-5 col-md-4 testimonial-sidebar">
           <?php if(have_rows('sidebar_testimonials')): while(have_rows('sidebar_testimonials')): the_row(); ?>
             <div class="sidebar-testimonial">
-              <p><?php the_sub_field('testimonial'); ?></p>
+              <?php the_sub_field('testimonial'); ?>
               <p class="testimonial-author"><?php the_sub_field('testimonial_author'); ?><br /><?php the_sub_field('testimonial_date'); ?>.</p>
             </div>
           <?php endwhile; endif; ?>
