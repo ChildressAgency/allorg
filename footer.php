@@ -1,6 +1,6 @@
   <section id="donate">
     <div class="container">
-      <?php the_field('donate_section_content'); ?>
+      <?php the_field('donate_section_content', 'option'); ?>
       <a href="<?php the_field('donation_link', 'option'); ?>" class="btn-main btn-donate">DONATE</a>
     </div>
   </section>
@@ -39,13 +39,13 @@
             ?>
             <div class="social">
               <?php if($facebook): ?>
-                <a href="<?php echo $facebook; ?>"><i class="fa fa-facebook-official"></i></a>
+                <a href="<?php echo $facebook; ?>"target="_blank"><i class="fa fa-facebook-official"></i></a>
               <?php endif; if($twitter): ?>
-                <a href="<?php echo $twitter; ?>"><i class="fa fa-twitter"></i></a>
+                <a href="<?php echo $twitter; ?>"target="_blank"><i class="fa fa-twitter"></i></a>
               <?php endif; if($instagram): ?>
-                <a href="<?php echo $instagram; ?>"><i class="fa fa-instagram"></i></a>
+                <a href="<?php echo $instagram; ?>"target="_blank"><i class="fa fa-instagram"></i></a>
               <?php endif; if($youtube): ?>
-                <a href="<?php echo $youtube; ?>"><i class="fa fa-youtube-play"></i></a>
+                <a href="<?php echo $youtube; ?>"target="_blank"><i class="fa fa-youtube-play"></i></a>
               <?php endif; ?>
             </div>
           </div>
@@ -106,13 +106,13 @@
             ?>
             <div class="social">
               <?php if($facebook): ?>
-                <a href="<?php echo $facebook; ?>"><i class="fa fa-facebook-official"></i></a>
+                <a href="<?php echo $facebook; ?>" target="_blank"><i class="fa fa-facebook-official"></i></a>
               <?php endif; if($twitter): ?>
-                <a href="<?php echo $twitter; ?>"><i class="fa fa-twitter"></i></a>
+                <a href="<?php echo $twitter; ?>" target="_blank"><i class="fa fa-twitter"></i></a>
               <?php endif; if($instagram): ?>
-                <a href="<?php echo $instagram; ?>"><i class="fa fa-instagram"></i></a>
+                <a href="<?php echo $instagram; ?>" target="_blank"><i class="fa fa-instagram"></i></a>
               <?php endif; if($youtube): ?>
-                <a href="<?php echo $youtube; ?>"><i class="fa fa-youtube-play"></i></a>
+                <a href="<?php echo $youtube; ?>" target="_blank"><i class="fa fa-youtube-play"></i></a>
               <?php endif; ?>
             </div>
           </div>
