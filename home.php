@@ -91,8 +91,8 @@
                   the_post_thumbnail('thumbnail', array('class' => 'img-responsive center-block'));
                 }
                 else{
-                  if(get_field('blog_post_placeholder_image', 'option')){
-                    echo '<img src="' . get_field('blog_post_placeholder_image', 'option') . '" class="img-responsive center-block" alt="" />';
+                  if(get_field('blog_post_default_image', 'option')){
+                    echo '<img src="' . get_field('blog_post_default_image', 'option') . '" class="img-responsive center-block" alt="" />';
                   }
                 }
               ?>
