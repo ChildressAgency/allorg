@@ -1,20 +1,15 @@
 <?php get_header(); ?>
-  <div class="container">
-    <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-      <?php if(function_exists('bcn_display')){
-        bcn_display();
-      } ?>
-    </div>
-    <div class="print-share">
-      <a href="#" onclick="window.print();"><i class="fa fa-print"></i></a>
-      <?php if(function_exists('ADDTOANY_SHARE_SAVE_KIT')){
-        ADDTOANY_SHARE_SAVE_KIT(array('use_current_page' => true));
-      } ?>
-      <?php if(function_exists('ADDTOANY_SHARE_SAVE_KIT')){
-        ADDTOANY_SHARE_SAVE_KIT(array('buttons' => array('email')));
-      } ?>
-    </div>
-  </div>
+<?php get_template_part('partials/breadcrumb', 'section'); ?>
+<?php 
+  global $post;
+  $parents = get_post_ancestors($post->ID);
+  $id = ($parents) ? $parents[count($parents) - 1] : $post->ID;
+  $parent = get_post($id);
+  if($parent->post_name == 'learn'){
+    get_template_part('partials/learn_nav', 'section');
+  }
+?>
+
 <main id="main">
   <div class="container narrow">
     <article>
@@ -24,4 +19,10 @@
     </article>
   </div>
 </main>
+
+<?php 
+  if($parent->post_name == 'learn'){
+    get_template_part('partials/learn_pagination', 'section');
+  }
+?>
 <?php get_footer(); ?>
