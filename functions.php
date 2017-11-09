@@ -194,7 +194,7 @@ function allorg_learn_nav_center_fallback(){ ?>
         <li><a href="<?php echo home_url('church-teachings'); ?>">Church Teachings</a></li>
         <li><a href="<?php echo home_url('variations-on-stem-cell-research'); ?>">Variations on Stem Cell Research</a></li>
         <li><a href="<?php echo home_url('frozen-embryos'); ?>">Frozen Embryos</a></li>
-        <li><a href="<?php echo home_url('moral arguments'): ?>">Moral Arguments</a></li>
+        <li><a href="<?php echo home_url('moral arguments'); ?>">Moral Arguments</a></li>
         <li><a href="<?php echo home_url('bioethics'); ?>">Bioethics</a></li>
       </ul>
     </li>
