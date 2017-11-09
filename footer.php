@@ -1,6 +1,6 @@
   <section id="donate">
     <div class="container">
-      <?php the_field('donate_section_content', 'option'); ?>
+      <?php the_field('donation_section_content', 'option'); ?>
       <a href="<?php the_field('donation_link', 'option'); ?>" class="btn-main btn-donate">DONATE</a>
     </div>
   </section>
@@ -139,7 +139,7 @@
     <div class="copyright">
       <div class="container">
         <p>&copy;<?php echo date('Y'); ?> American Life League, Inc.</p>
-        <p>website created by <a href="https://childressagency.com">The Childress Agency</a></p>
+        <p>website created by <a href="https://childressagency.com" target="_blank">The Childress Agency</a></p>
       </div>
     </div>
   </footer>
