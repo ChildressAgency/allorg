@@ -24,7 +24,6 @@
         <div class="row">
           <div class="col-sm-5">
             <ul class="acronym">
-              <!-- .acronym>li::first-letter-->
               <li>Educate</li>
               <li>Protect</li>
               <li>Inspire</li>
