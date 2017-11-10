@@ -90,9 +90,9 @@ function allorg_learn_nav_left_fallback(){ ?>
       <ul class="dropdown-menu">
         <li><a href="<?php echo home_url('abortion'); ?>">Abortion</a></li>
         <li><a href="<?php echo home_url('abortion-history'); ?>">History</a></li>
-        <li><a href="<?php echo home_url('statistice'); ?>">Statistics</a></li>
+        <li><a href="<?php echo home_url('statistics'); ?>">Statistics</a></li>
         <li><a href="<?php echo home_url('methods'); ?>">Methods</a></li>
-        <li><a href="<?php echo home-url('exceptions'); ?>">Exceptions</a></li>
+        <li><a href="<?php echo home_url('exceptions'); ?>">Exceptions</a></li>
       </ul>
     </li>
     <li class="dropdown">
@@ -213,7 +213,7 @@ function allorg_learn_nav_center_fallback(){ ?>
   </ul>
 <?php }
 
-function allorg_learn_nav_right(){ ?>
+function allorg_learn_nav_right_fallback(){ ?>
   <ul class="nav learn-nav">
     <li<?php if(is_page('policy-politicians')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('policy-politicians'); ?>" title="Policy & Politicians">Policy & Politicians</a></li>
     <li class="dropdown">

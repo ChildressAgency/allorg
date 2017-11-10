@@ -11,12 +11,19 @@
             $pages[] += $page->ID;
           }
           $current = array_search($post->ID, $pages);
-          $prevID = $pages[$current - 1];
-          $nextID = $pages[$current + 1];
+          if($current > 0){
+            $prevID = $pages[$current - 1];
+            echo '<li>PREVIOUS: <a href="' . get_permalink($prevID) . '">' . get_the_title($prevID) . '</a></li>';
+          }
         ?>
-        <li>PREVIOUS: <a href="<?php echo get_permalink($prevID); ?>"><?php echo get_the_title($prevID); ?></a></li>
         <li>HOME: <a href="<?php echo get_permalink($parent); ?>"><?php echo get_the_title($parent); ?></a></li>
-        <li>NEXT: <a href="<?php echo get_permalink($nextID); ?>"><?php echo get_the_title($nextID); ?></a></li>
+
+        <?php
+          if($current < (count($pages) - 1)){
+            $nextID = $pages[$current + 1];
+            echo '<li>NEXT: <a href="' . get_permalink($nextID) . '">' . get_the_title($nextID) . '</a></li>';
+          }
+        ?>
       </ul>
     </div>
   </nav>
