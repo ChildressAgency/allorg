@@ -68,13 +68,13 @@
         );
 
         if(isset($_GET['post_month'])){
-          $post_list_args['date_query']['month'] => $_GET['post_month'];
+          $post_list_args['date_query']['month'] = $_GET['post_month'];
         }
         if(isset($_GET['post_year'])){
-          $post_list_args['date_query']['year'] => $_GET['post_year'];
+          $post_list_args['date_query']['year'] = $_GET['post_year'];
         }
         if(isset($_GET['post_category'])){
-          $post_list_args['cat'] => $_GET['post_category'];
+          $post_list_args['cat'] = $_GET['post_category'];
         }
 
         $articles = new WP_Query($post_list_args);
@@ -105,10 +105,12 @@
                 <div class="col-sm-6">
                   <?php 
                     $categories = get_the_category();
-                    $cat_name = esc_html($categories[0]->name);
-                    $cat_link = esc_url(get_category_link($categories[0]->term_id));
+                    if($categories){
+                      $cat_name = esc_html($categories[0]->name);
+                      $cat_link = esc_url(get_category_link($categories[0]->term_id));
+                      echo '<a href="' . $cat_link . '" class="post-category" style="color:'. get_field('font_color', 'category_' . $categories[0]->term_id) . ';">' . $cat_name . '</a>';
+                    }
                   ?>
-                  <a href="<?php echo $cat_link; ?>" class="post-category" style="color:#666;"><?php echo cat_name; ?></a>
                 </div>
               </div>
               <h1><?php the_title(); ?></h1>

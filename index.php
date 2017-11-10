@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <main id="main">
   <div class="container narrow">
-    <?php if(have_post()): while(have_psots()): the_post(); ?>
-      <?php if(is_archive()): ?>
+    <?php if(have_posts()): while(have_posts()): the_post(); ?>
+      <?php if(is_archive() || is_search()): ?>
 
         <div class="post-summary">
           <div class="row">
@@ -26,10 +26,12 @@
                 <div class="col-sm-6">
                   <?php 
                     $categories = get_the_category();
-                    $cat_name = esc_html($categories[0]->name);
-                    $cat_link = esc_url(get_category_link($categories[0]->term_id));
+                    if($categories){
+                      $cat_name = esc_html($categories[0]->name);
+                      $cat_link = esc_url(get_category_link($categories[0]->term_id));
+                      echo '<a href="' . $cat_link . '" class="post-category" style="color:'. get_field('font_color', 'category_' . $categories[0]->term_id) . ';">' . $cat_name . '</a>';
+                    }
                   ?>
-                  <a href="<?php echo $cat_link; ?>" class="post-category" style="color:#666;"><?php echo cat_name; ?></a>
                 </div>
               </div>
               <h1><?php the_title(); ?></h1>
@@ -42,9 +44,7 @@
       <?php else: ?>
 
         <article>
-          <?php if(have_posts()): while(have_posts()): the_post(); ?>
-            <?php the_content(); ?>
-          <?php endwhile; endif; ?>
+          <?php the_content(); ?>
         </article>
 
       <?php endif; ?>
