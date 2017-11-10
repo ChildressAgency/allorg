@@ -86,7 +86,7 @@ function allorg_learn_nav_left_fallback(){ ?>
                                                   is_page('abortion-history') || 
                                                   is_page('statistics') || 
                                                   is_page('methods') || 
-                                                  is_page('exceptions')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="abortion">Abortion</a>
+                                                  is_page('exceptions')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="abortion">Abortion <i class="fa fa-caret-down"></i></a>
       <ul class="dropdown-menu">
         <li><a href="<?php echo home_url('abortion'); ?>">Abortion</a></li>
         <li><a href="<?php echo home_url('abortion-history'); ?>">History</a></li>
@@ -99,7 +99,7 @@ function allorg_learn_nav_left_fallback(){ ?>
       <a href="#" class="dropdown-toggle<?php if(is_page('contraception') || 
                                                   is_page('words-matter') || 
                                                   is_page('abortion-connection') || 
-                                                  is_page('naturally-spacing-children')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Contraception">Contraception</a>
+                                                  is_page('naturally-spacing-children')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Contraception">Contraception <i class="fa fa-caret-down"></i></a>
       <ul class="dropdown-menu">
         <li><a href="<?php echo home_url('contraception'); ?>">Contraception</a></li>
         <li><a href="<?php echo home_url('words-matter'); ?>">Words Matter</a></li>
@@ -121,7 +121,7 @@ function allorg_learn_nav_left_fallback(){ ?>
                                                   is_page('ordinary-vs-extraordinary-care') ||
                                                   is_page('living-wills-and-advanced-directives') ||
                                                   is_page('end-of-life-issues-guide-decision-making-by-patie') ||
-                                                  is_page('miracles')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Euthanasia">Euthanasia</a>
+                                                  is_page('miracles')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Euthanasia">Euthanasia <i class="fa fa-caret-down"></i></a>
       <ul class="dropdown-menu">
         <li><a href="<?php echo home_url('euthanasia'); ?>">Euthanasia</a></li>
         <li><a href="<?php echo home_url('history'); ?>">History</a></li>
@@ -147,7 +147,7 @@ function allorg_learn_nav_center_fallback(){ ?>
     <li class="dropdown">
       <a href="#" class="dropdown-toggle<?php if(is_page('ivf') ||
                                                   is_page('artificial-fertilization-and-the-catholic-response') ||
-                                                  is_page('embryo-adoption')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="IVF">IVF</a>
+                                                  is_page('embryo-adoption')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="IVF">IVF <i class="fa fa-caret-down"></i></a>
       <ul class="dropdown-menu">
         <li><a href="<?php echo home_url('ivf'); ?>">IVF</a></li>
         <li><a href="<?php echo home_url('artificial-fertilization-and-the-catholic-response'); ?>">Artificial Fertilization and the Catholic Response</a></li>
@@ -161,7 +161,7 @@ function allorg_learn_nav_center_fallback(){ ?>
                                                   is_page('do-i-have-to-spend-my-last-days-hooked-up-to-machines') ||
                                                   is_page('understanding-brain-death') ||
                                                   is_page('life-life-support-and-death') ||
-                                                  is_page('should-i-be-an-organ-donor')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Organ Donation">Organ Donation</a>
+                                                  is_page('should-i-be-an-organ-donor')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Organ Donation">Organ Donation <i class="fa fa-caret-down"></i></a>
       <ul class="dropdown-menu">
         <li><a href="<?php echo home_url('organ-donation'); ?>">Organ Donation</a></li>
         <li><a href="<?php echo home_url('when-is-a-person-really-dead'); ?>">When is a Person Really Dead?</a></li>
@@ -183,7 +183,7 @@ function allorg_learn_nav_center_fallback(){ ?>
                                                   is_page('variations-on-stem-cell-research') ||
                                                   is_page('frozen embryos') ||
                                                   is_page('moral-arguments') ||
-                                                  is_page('bioethics')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Stem Cells">Stem Cells</a>
+                                                  is_page('bioethics')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Stem Cells">Stem Cells <i class="fa fa-caret-down"></i></a>
       <ul class="dropdown-menu">
         <li><a href="<?php echo home_url('stem-cells'); ?>">Stem Cells</a></li>
         <li><a href="<?php echo home_url('embryology'); ?>">Embryology</a></li>
@@ -202,7 +202,7 @@ function allorg_learn_nav_center_fallback(){ ?>
       <a href="#" class="dropdown-toggle<?php if(is_page('planned-parenthood') ||
                                                   is_page('margaret-sanger') ||
                                                   is_page('guttmacher-institute') ||
-                                                  is_page('resources')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Planned Parenthood">Planned Parenthood</a>
+                                                  is_page('resources')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Planned Parenthood">Planned Parenthood <i class="fa fa-caret-down"></i></a>
       <ul class="dropdown-menu">
         <li><a href="<?php echo home_url('planned-parenthood'); ?>">Planned Parenthood</a></li>
         <li><a href="<?php echo home_url('margaret-sanger'); ?>">Margaret Sanger</a></li>
@@ -218,7 +218,7 @@ function allorg_learn_nav_right_fallback(){ ?>
     <li<?php if(is_page('policy-politicians')){ echo ' class="active"'; } ?>><a href="<?php echo home_url('policy-politicians'); ?>" title="Policy & Politicians">Policy & Politicians</a></li>
     <li class="dropdown">
       <a href="#" class="dropdown-toggle<?php if(is_page('research') ||
-                                                  is_page('population-control')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Research">Research</a>
+                                                  is_page('population-control')){ echo ' active'; } ?>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" title="Research">Research <i class="fa fa-caret-down"></i></a>
       <ul class="dropdown-menu">
         <li><a href="<?php echo home_url('research'); ?>">Research</a></li>
         <li><a href="<?php echo home_url('population-control'); ?>">Population Control</a></li>
