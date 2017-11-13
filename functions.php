@@ -444,3 +444,19 @@ if(function_exists('acf_add_options_page')){
     'redirect' => false
   ));
 }
+
+add_filter('acf/load_value/name=charities', 'allorg_acf_load_value', 10, 3);
+function allorg_acf_load_value($value, $post_id, $field){
+  $order = array();
+  $row_key = 'field_5a09ded35ecfd';
+
+  if(empty($value)){ return $value; }
+
+  foreach($value as $i => $row){
+    $order[$i] = $row[$row_key];
+  }
+
+  array_multisort($order, SORT_ASC, $value);
+
+  return $value;
+}

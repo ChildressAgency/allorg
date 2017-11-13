@@ -97,4 +97,19 @@ jQuery(document).ready(function($){
 
   $('#creation-carousel .carousel-inner .item').carouselHeights();
 
+  //alpha-nav smooth scroll
+  $('.alpha-nav>ul>li>a, back-to-top').on('click', function (e) {
+    e.preventDefault;
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 40
+        }, 1000);
+        return false;
+      }
+    }
+  });  
+
 });

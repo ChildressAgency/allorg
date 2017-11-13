@@ -88,7 +88,8 @@ a{
   -webkit-transition:all .3s ease;
   transition:all .3s ease;
 }
-.btn-main{
+.btn-main,
+.gform_button{
   display:inline-block;
   color:#fff;
   background-color:#ec2730;
@@ -100,7 +101,9 @@ a{
   transition:all .3s ease;
 }
 .btn-main:hover,
-.btn-main:focus{
+.btn-main:focus,
+.gform_button:hover,
+.gform_button:focus{
   background-color:#224182;
   color:#fff;
   text-decoration:none;
@@ -1098,6 +1101,58 @@ blockquote.epic-fashion footer>span{
 .wp-pagenavi a:hover, 
 .wp-pagenavi span.current {
   font-weight:700;
+}
+
+.hide-label>label{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.ginput_container>input{
+  border:none;
+  background-color:#f1f1f1;
+}
+#main .gform_wrapper .gfield_checkbox li input, 
+#main .gform_wrapper .gfield_checkbox li input[type=checkbox], 
+#main .gform_wrapper .gfield_radio li input[type=radio]{
+  margin-top:0;
+}
+#main .gform_wrapper .gfield_checkbox li label, 
+#main .gform_wrapper .gfield_radio li label{
+  font-size:14px;
+  font-weight:400;
+  padding-left:5px;
+}
+
+.charity{
+  margin-bottom:40px;
+}
+.charity-info h4>span{
+  display:inline-block;
+  vertical-align:middle;
+  margin-right:5px;
+  height:20px;
+  width:20px;
+  background-image:url(images/rating-icons.png);
+  background-repeat:no-repeat;
+}
+.charity-info h4>span.positive{
+  background-position:-20px 0px;
+}
+.charity-info h4>span.negative{
+  background-position:0px 0px;
+}
+.charity-info h4>span.caution{
+  background-position:-41px 0px;
+}
+.alpha-nav{
+  padding-top:40px;
+  padding-bottom:40px;
 }
 
 
