@@ -241,10 +241,11 @@ img.alignright,
   color:#ec2730;
   text-decoration:none;
 }
+/*
 .main-nav .dropdown:hover .dropdown-menu{
   display:block;
   margin-top:0;
-}
+}*/
 .navbar-toggle{
   border-color:#224182;
 }

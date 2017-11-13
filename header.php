@@ -60,7 +60,7 @@
               'echo' => true,
               'fallback_cb' => 'allorg_header_nav_fallback',
               'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li class="hidden-xs"><a href="#" class="ico-search"><i class="fa fa-search"></i></a></li></ul>',
-              'depth' => 2,
+              'depth' => 0,
               'walker' => new wp_bootstrap_navwalker()
             );
             wp_nav_menu($header_nav_args);
