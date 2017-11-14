@@ -830,31 +830,31 @@ blockquote.epic-fashion footer>span{
   padding-left:0;
 }
 
-#learn-nav{
+#top-nav{
   text-align:center;
 }
-#learn-nav>.container{
+#top-nav>.container{
   max-width:700px;
   border-bottom:1px solid #e2e2e2;
   padding-bottom:40px;
 }
-.nav.learn-nav a{
+.nav.top-nav a{
   text-transform:uppercase;
   color:#ec2730;
   height:40px;
 }
-.nav.learn-nav a:hover,
-.nav.learn-nav a:focus,
-.nav.learn-nav>li.active a,
-.nav.learn-nav .open>a,
-.nav.learn-nav .open>a:focus,
-.nav.learn-nav .open>a:hover{
+.nav.top-nav a:hover,
+.nav.top-nav a:focus,
+.nav.top-nav>li.active a,
+.nav.top-nav .open>a,
+.nav.top-nav .open>a:focus,
+.nav.top-nav .open>a:hover{
   font-weight:900;
   font-size:15px;
   background-color:transparent;
 }
 /*
-.nav.learn-nav a:after{
+.nav.top-nav a:after{
   display:block;
   content:attr(title);
   font-weight:900;
@@ -864,18 +864,18 @@ blockquote.epic-fashion footer>span{
   overflow:hidden;
   visibility:hidden;
 }*/
-.nav.learn-nav .dropdown-menu{
+.nav.top-nav .dropdown-menu{
   text-align:center;
   right:0;
 }
-.nav.learn-nav .dropdown-menu>li>a{
+.nav.top-nav .dropdown-menu>li>a{
   white-space:normal;
   color:#224182;
   height:auto;
 }
-.nav.learn-nav .dropdown-menu>li>a:hover,
-.nav.learn-nav .dropdown-menu>li>a:focus,
-.nav.learn-nav .dropdown-menu>li.active>a{
+.nav.top-nav .dropdown-menu>li>a:hover,
+.nav.top-nav .dropdown-menu>li>a:focus,
+.nav.top-nav .dropdown-menu>li.active>a{
   font-size:14px;
   font-weight:400;
   text-decoration:underline;
