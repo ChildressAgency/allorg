@@ -8,6 +8,9 @@
   if($parent->post_name == 'learn'){
     get_template_part('partials/learn_nav', 'section');
   }
+  elseif($parent->post_name == 'activist-materials'){
+    get_template_part('partials/activist_materials_nav', 'section');
+  }
 ?>
 
 <main id="main">

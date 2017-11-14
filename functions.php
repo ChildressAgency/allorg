@@ -73,7 +73,10 @@ function allorg_register_menus(){
       'header-nav' => 'Header Navigation',
       'learn-nav-left' => 'Learn Navigation Left',
       'learn-nav-center' => 'Learn Navigation Center',
-      'learn-nav-right' => 'Learn Navigation Right'
+      'learn-nav-right' => 'Learn Navigation Right',
+      'activist-materials-nav-left' => 'Activist Materials Navigation Left',
+      'activist-materials-nav-center' => 'Activist Materials Navigation Center',
+      'activist-materials-nav-right' => 'Activist Materials Navigation Right'
     )
   );
 }

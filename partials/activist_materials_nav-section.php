@@ -13,6 +13,7 @@
               'menu_id' => '',
               'echo' => true,
               //'fallback_cb' => 'allorg_activist_materials_nav_left_fallback',
+              'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
               'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
               'depth' => 2,
               'walker' => new wp_bootstrap_navwalker()
@@ -32,6 +33,7 @@
               'menu_id' => '',
               'echo' => true,
               //'fallback_cb' => 'allorg_activist_materials_nav_center_fallback',
+              'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
               'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
               'depth' => 2,
               'walker' => new wp_bootstrap_navwalker()
@@ -51,6 +53,7 @@
               'menu_id' => '',
               'echo' => true,
               //'fallback_cb' => 'allorg_activist_materials_nav_right_fallback',
+              'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
               'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
               'depth' => 2,
               'walker' => new wp_bootstrap_navwalker()

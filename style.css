@@ -849,9 +849,10 @@ blockquote.epic-fashion footer>span{
 .nav.top-nav .open>a,
 .nav.top-nav .open>a:focus,
 .nav.top-nav .open>a:hover{
-  font-weight:900;
-  font-size:15px;
+  /*font-weight:900;*/
+  /*font-size:15px;*/
   background-color:transparent;
+  text-decoration:underline;
 }
 /*
 .nav.top-nav a:after{
