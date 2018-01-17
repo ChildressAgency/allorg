@@ -144,6 +144,41 @@
             $hero_caption = get_the_title(); 
           }
         ?>
+
+        <?php 
+          $hero_caption_type = get_field('choose_hero_caption');
+          switch($hero_caption_type){
+            case 'Page Title':
+              $hero_caption = get_the_title();
+            break;
+
+            case 'Parent Page Title':
+              $current_page_id = $post->ID;
+              $current_page_title = get_the_title($current_page_id);
+
+              $parent_page_id = $post->post_parent;
+              $parent_page_title = get_the_title($parent_page_id);
+              $parent_page = get_post($parent_page_id);
+
+              $grandparent_page_id = $parent_page->post_parent;
+              $grandparent_page_title = get_the_title($grandparent_page_id);
+
+              if ($grandparent_title !== $current_page_title){
+                $hero_caption = $grandparent_page_title; 
+              }
+              else{
+                $hero_caption = $parent_page_title; 
+              }
+            break;
+
+            case 'Custom Title':
+              $hero_caption = get_field('custom_title');
+            break;
+
+            default:
+              $hero_caption = '';
+          }
+        ?>
         <p class="caption"><?php echo $hero_caption; ?></p>
       </div>
     </div>
