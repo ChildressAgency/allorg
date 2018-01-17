@@ -841,7 +841,7 @@ blockquote.epic-fashion footer>span{
 .nav.top-nav a{
   text-transform:uppercase;
   color:#ec2730;
-  height:40px;
+  /*height:40px;*/
 }
 .nav.top-nav a:hover,
 .nav.top-nav a:focus,
@@ -853,6 +853,7 @@ blockquote.epic-fashion footer>span{
   /*font-size:15px;*/
   background-color:transparent;
   text-decoration:underline;
+  color:#224182;
 }
 /*
 .nav.top-nav a:after{
