@@ -136,23 +136,25 @@
     ?>
     <div class="hero" style="background-image:url(<?php echo $hero_image; ?>);<?php echo hero_image_css; ?>">
       <div class="container">
-        <?php 
+        <?php /*
           if(get_field('hero_caption')){
             $hero_caption = get_field('hero_caption');
           }
           else{
             $hero_caption = get_the_title(); 
-          }
+          }*/
         ?>
 
         <?php 
           $hero_caption_type = get_field('choose_hero_caption');
+          //var_dump($hero_caption_type);
           switch($hero_caption_type){
             case 'Page Title':
               $hero_caption = get_the_title();
             break;
 
             case 'Parent Page Title':
+            /*
               $current_page_id = $post->ID;
               $current_page_title = get_the_title($current_page_id);
 
@@ -163,12 +165,14 @@
               $grandparent_page_id = $parent_page->post_parent;
               $grandparent_page_title = get_the_title($grandparent_page_id);
 
-              if ($grandparent_title !== $current_page_title){
+              if ($grandparent_page_title !== $current_page_title){
                 $hero_caption = $grandparent_page_title; 
               }
               else{
                 $hero_caption = $parent_page_title; 
-              }
+              }*/
+
+              $hero_caption = get_the_title($post->post_parent);
             break;
 
             case 'Custom Title':
