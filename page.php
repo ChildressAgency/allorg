@@ -23,6 +23,8 @@
         <?php the_content(); ?>
       <?php endwhile; endif; ?>
     </article>
+    <hr />
+    <a href="#top-nav">top</a>
   </div>
 </main>
 
