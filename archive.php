@@ -67,13 +67,13 @@
           'paged' => $paged
         );
 
-        if(isset($_GET['post_month'])){
+        if(isset($_GET['post_month']) && !empty($_GET['post_month'])){
           $post_list_args['date_query']['month'] = $_GET['post_month'];
         }
-        if(isset($_GET['post_year'])){
+        if(isset($_GET['post_year']) && !empty($_GET['post_year'])){
           $post_list_args['date_query']['year'] = $_GET['post_year'];
         }
-        if(isset($_GET['post_category'])){
+        if(isset($_GET['post_category']) && !empty($_GET['post_category'])){
           $post_list_args['cat'] = $_GET['post_category'];
         }
 
