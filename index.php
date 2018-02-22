@@ -21,22 +21,50 @@
             <div class="col-sm-9 col-md-10">
               <div class="row">
                 <div class="col-sm-6">
-                  <a href="<?php echo home_url() . '/' . get_the_date('Y') . '/' . get_the_date('m'); ?>" class="post-date"><?php echo get_the_date('F j, Y h:i A'); ?></a>
+                  <a href="<?php echo home_url() . '/' . get_the_date('Y') . '/' . get_the_date('m'); ?>" class="post-date hidden-xs"><?php echo get_the_date('F j, Y'); ?></a>
                 </div>
                 <div class="col-sm-6">
                   <?php 
                     $categories = get_the_category();
                     if($categories){
                       $cat_name = esc_html($categories[0]->name);
-                      $cat_link = esc_url(get_category_link($categories[0]->term_id));
-                      echo '<a href="' . $cat_link . '" class="post-category" style="color:'. get_field('font_color', 'category_' . $categories[0]->term_id) . ';">' . $cat_name . '</a>';
+                      $cat_term_id = $categories[0]->term_id;
+                      $cat_link = esc_url(get_category_link($cat_term_id));
+
+                      if($cat_name == 'Homepage'){
+                        $cat_name = esc_html($categories[1]->name);
+                        $cat_term_id = $categories[1]->term_id;
+                        $cat_link = esc_url(get_category_link($cat_term_id));
+                      }                      
+                      echo '<a href="' . $cat_link . '" class="post-category hidden-xs" style="color:'. get_field('font_color', 'category_' . $cat_term_id) . ';">' . $cat_name . '</a>';
                     }
                   ?>
                 </div>
               </div>
-              <h1><?php the_title(); ?></h1>
+              <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+              <?php
+                if($categories){
+                  $cat_name = esc_html($categories[0]->name);
+                  $cat_term_id = $categories[0]->term_id;
+                  $cat_link = esc_url(get_category_link($cat_term_id));
+                  
+                  if($cat_name == 'Homepage'){
+                    $cat_name = esc_html($categories[1]->name);
+                    $cat_term_id = $categories[1]->term_id;
+                    $cat_link = esc_url(get_category_link($cat_term_id));
+                  }                      
+                  echo '<a href="' . $cat_link . '" class="post-category visible-xs-block" style="color:'. get_field('font_color', 'category_' . $cat_term_id) . ';">' . $cat_name . '</a>';
+                }
+              ?>              
               <?php the_excerpt(); ?>
-              <a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
+              <div class="row">
+                <div class="col-xs-6 col-sm-12">
+                  <a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
+                </div>
+                <div class="col-xs-6">
+                  <a href="<?php echo home_url() . '/' . get_the_date('Y') . '/' . get_the_date('m'); ?>" class="post-date visible-xs-block"><?php echo get_the_date('F j, Y'); ?></a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

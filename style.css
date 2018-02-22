@@ -503,6 +503,9 @@ img.alignright,
   margin-top:15px;
   margin-bottom:0;
 }
+.post-summary h1>a{
+  color:#164491;
+}
 
 #meetJudie{
   margin-top:100px;
